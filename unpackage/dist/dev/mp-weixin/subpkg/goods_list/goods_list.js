@@ -213,7 +213,7 @@ var _goods = __webpack_require__(/*! @/api/goods.js */ 57);function _interopRequ
 
   // 拉下触底
   onReachBottom: function onReachBottom() {
-    if (this.queryData.pagenum * this.queryData.pagesize >= this.total) (0, _toast.default)('亲，没有更多数据了~');
+    if (this.queryData.pagenum * this.queryData.pagesize >= this.total) return (0, _toast.default)('亲，没有更多数据了~');
     if (this.isLoading) return;
     this.queryData.pagenum++;
     this.loadGoodsList();

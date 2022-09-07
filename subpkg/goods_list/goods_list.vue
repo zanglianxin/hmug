@@ -62,7 +62,7 @@
 
     // 拉下触底
     onReachBottom() {
-      if (this.queryData.pagenum * this.queryData.pagesize >= this.total) toast('亲，没有更多数据了~')
+      if (this.queryData.pagenum * this.queryData.pagesize >= this.total) return toast('亲，没有更多数据了~')
       if (this.isLoading) return
       this.queryData.pagenum++
       this.loadGoodsList()
