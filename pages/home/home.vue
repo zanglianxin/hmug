@@ -34,13 +34,15 @@
         <view class="floor-img-box">
           <!-- 左侧大图片的盒子 -->
           <view class="left-img-box">
-            <image :style="{width: item.product_list[0].image_width + 'rpx'}" class="left-img"
+            <image @click="goGoodsList(item.product_list[0].navigator_url)"
+              :style="{width: item.product_list[0].image_width + 'rpx'}" class="left-img"
               :src="item.product_list[0].image_src"></image>
           </view>
           <!-- 右侧 4 个小图片的盒子 -->
           <view class="right-img-box">
             <view class="right-img-item" v-for="(item2, i) in item.product_list" :key="i" v-if="i !== 0">
-              <image class="image" :style="{width: item2.image_width + 'rpx'}" :src="item2.image_src"></image>
+              <image @click="goGoodsList(item2.navigator_url)" class="image" :style="{width: item2.image_width + 'rpx'}"
+                :src="item2.image_src"></image>
             </view>
           </view>
         </view>
@@ -89,6 +91,13 @@
         const res = await getFloorList()
         console.log(res);
         this.floors = res
+      },
+
+      // 点击跳转到商品列表
+      goGoodsList(url) {
+        uni.navigateTo({
+          url: '/subpkg/goods_list/goods_list?' + url.split('?')[1]
+        })
       },
 
       // 点击导航按钮跳转
