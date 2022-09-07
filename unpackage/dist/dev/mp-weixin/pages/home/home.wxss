@@ -26,21 +26,63 @@
 /* 文章场景相关 */
 .topSearch {
   width: 750rpx;
-  height: 70px;
+  height: 160rpx;
   background-color: #c00000;
   display: flex;
   justify-content: center;
   overflow: hidden;
 }
 .topSearch .search_btn {
-  width: 450rpx;
-  height: 30px;
-  margin-top: 25px;
-  margin-right: 50px;
+  width: 500rpx;
+  height: 60rpx;
+  margin-top: 80rpx;
+  margin-right: 180rpx;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 35rpx;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+swiper {
+  height: 330rpx;
+}
+swiper .swiper-item,
+swiper image {
+  width: 100%;
+  height: 100%;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+.nav-list .nav-img {
+  width: 128rpx;
+  height: 140rpx;
+}
+.floor-title {
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+}
+.floor-title {
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+}
+.right-img-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.right-img-box .image {
+  height: 192rpx;
+}
+.floor-img-box {
+  display: flex;
+  padding-left: 10rpx;
+}
+.floor-img-box .left-img {
+  height: 392rpx !important;
 }
 
